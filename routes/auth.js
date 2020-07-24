@@ -13,7 +13,7 @@ const nodemailer=require("nodemailer");
 const sendgridTransport=require("nodemailer-sendgrid-transport");
 const Transporter=nodemailer.createTransport(sendgridTransport({
     auth:{
-        api_key:"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"
+        api_key:"your sendgrid api key which is generated"
     }
 }))
 
@@ -121,22 +121,7 @@ router.put("/updateProfile",requireLogin,(req,res)=>{
             })
             .then((updateResult)=>{
                 res.json(updateResult)
-            //    if(PrevSave){
-            //       return  res.status(413).json({error:'This Email Already Exists !!'});
-            //     }
-                     /* const user=new User({
-                          name,
-                          email,
-                          username,
-                          password:hashedPassword
-                      })
-                      user.save()
-                        .then(user=>{
-                            res.json({message:"Saved Successfully"})
-                        })
-                        .catch(error=>{
-                            console.log(error);
-                        })*/
+                     
              })
         }
     })
